@@ -15,6 +15,7 @@ from collections import Counter,defaultdict
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import numpy as np
 
 # open the input path
 with open(args.input_path) as f:
@@ -30,10 +31,18 @@ items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), rev
 #print(items)
 keys = []
 values = []
+count = 0
 for k,v in items:
-    keys += [k]
-    values += [int(v)]
-fig = plt.bar(keys[0:10], values[0:10])
+    if count <=9:
+        keys += [k]
+        values += [int(v)]
+    count += 1
+n = len(keys)
+ind = np.arange(n)
+fig = plt.bar(ind, values)
+plt.ylabel('# of Tweets')
+plt.xticks(ind, keys)
+plt.xlabel('x axis')
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.savefig(f"./{args.input_path}_{args.key}_figure.png")
