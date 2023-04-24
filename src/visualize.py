@@ -27,13 +27,13 @@ if args.percent:
 
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-
+#print(items)
 keys = []
 values = []
 for k,v in items:
     keys += [k]
     values += [int(v)]
-fig = plt.bar(keys[0:11], values[0:11])
+fig = plt.bar(keys[0:10], values[0:10])
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.savefig(f"./{args.input_path}_{args.key}_figure.png")
