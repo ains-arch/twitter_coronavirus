@@ -29,14 +29,15 @@ for key in args.keys:
                 for k in tmp[key]:
                     num += tmp[key][k]
             except:
-                print('man')
+                pass
+                #print('man')
             yaxis.append(num)
     plt.plot(np.arange(366), yaxis, label = key)
 plt.ylabel('Number of Tweets')
 dates = [0, 58, 119, 180, 242, 303]
 months = ['Jan.', "March", "May", "July", "Sept.", "Nov."]
 plt.xticks(dates, months)
-plt.xlabel('Date')
+plt.xlabel('Date (2020)')
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.legend()

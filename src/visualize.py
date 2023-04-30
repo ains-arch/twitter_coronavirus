@@ -40,6 +40,7 @@ for k,v in items:
 n = len(keys)
 ind = np.arange(n)
 fig = plt.bar(ind, values)
+realnum = [50000, 100000, 150000, 200000]
 plt.ylabel('Number of Tweets')
 plt.xticks(ind, keys)
 #title = 'Tweets Including'
@@ -57,6 +58,7 @@ else:
 plt.xlabel(axis)
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
+plt.tight_layout()
 plt.savefig(f"./{args.input_path}_{args.key}_figure.png")
 #plt.close(fig)
 # print(k,':',v)
