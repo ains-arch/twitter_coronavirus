@@ -58,13 +58,13 @@ I used `reduce.py` file to combine all of the language files into a single file,
 I modified the `visualize.py` file so that, rather than simply printing the results, it generates a bar graph of the results and stores the bar graph as a png file using the matplotlib library.
 I used this command to create the following bar graphs of the top 10 languages and countries by volume of tweets with the given hashtag:
 
-<img src=reduced.lang_#coronavirus_figure.png width=100% />
+<img src=reduced.lang_%23coronavirus_figure.png width=100% />
 
-<img src=reduced.country_#coronavirus_figure.png width=100% />
+<img src=reduced.country_%23coronavirus_figure.png width=100% />
 
-<img src=reduced.lang_#코로나바이러스_figure.png width=100% />
+<img src=reduced.lang_%23코로나바이i러스_figure.png width=100% />
 
-<img src=reduced.country_#코로나바이러스_figure.png width=100% />
+<img src=reduced.country_%23코로나바이러스_figure.png width=100% />
 
 By "Korean Coronavirus Hashtag", I am referring specifically to `#코로나바이러스`.
 `und`, or "undefined" tweets are tweets that don't have language metadata.
