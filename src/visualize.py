@@ -43,9 +43,12 @@ fig = plt.bar(ind, values)
 plt.ylabel('# of Tweets')
 plt.xticks(ind, keys)
 title = 'Tweets including'
-title += f'{args.key} by'
+if "coronavirus" in args.key:
+    title += f'{args.key} by'
+else:
+    title += "the Korean coronavirus hashtag"
 if "country" in args.input_path:
-    title += 'country'
+    title += ' country'
     axis = 'Country'
 else:
     title += 'language'
