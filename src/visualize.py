@@ -42,7 +42,16 @@ ind = np.arange(n)
 fig = plt.bar(ind, values)
 plt.ylabel('# of Tweets')
 plt.xticks(ind, keys)
-plt.xlabel('x axis')
+title = 'Tweets including'
+title += f'{args.key} by'
+if "country" in args.input_path:
+    title += 'country'
+    axis = 'Country'
+else:
+    title += 'language'
+    axis = 'Language'
+plt.title(title)
+plt.xlabel(axis)
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.savefig(f"./{args.input_path}_{args.key}_figure.png")
