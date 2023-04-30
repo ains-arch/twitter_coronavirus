@@ -62,7 +62,7 @@ I used this command to create the following bar graphs of the top 10 languages a
 
 <img src=reduced.country_%23coronavirus_figure.png width=100% />
 
-<img src=reduced.lang_%23코로나바이i러스_figure.png width=100% />
+<img src=reduced.lang_%23코로나바이러스_figure.png width=100% />
 
 <img src=reduced.country_%23코로나바이러스_figure.png width=100% />
 
