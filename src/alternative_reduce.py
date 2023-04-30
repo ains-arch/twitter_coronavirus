@@ -38,6 +38,7 @@ dates = [0, 58, 119, 180, 242, 303]
 months = ['Jan.', "March", "May", "July", "Sept.", "Nov."]
 plt.xticks(dates, months)
 plt.xlabel('Date (2020)')
+plt.title("Tweets with Coronavirus Hashtags per Day in 2020")
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.legend()

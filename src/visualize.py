@@ -43,18 +43,18 @@ fig = plt.bar(ind, values)
 realnum = [50000, 100000, 150000, 200000]
 plt.ylabel('Number of Tweets')
 plt.xticks(ind, keys)
-#title = 'Tweets Including'
-#if "coronavirus" in args.key:
-    #title += f' {args.key} by'
-#else:
-    #title += " the Korean Coronavirus Hashtag by"
+title = 'Tweets Including'
+if "coronavirus" in args.key:
+    title += f" '{args.key}' by"
+else:
+    title += " the Korean Coronavirus Hashtag by"
 if "country" in args.input_path:
-    #title += ' Country'
+    title += ' Country'
     axis = 'Country Code'
 else:
-    #title += 'language'
+    title += ' Language'
     axis = 'Language Code'
-#plt.title(title)
+plt.title(title)
 plt.xlabel(axis)
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
