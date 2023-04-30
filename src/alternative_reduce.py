@@ -32,11 +32,11 @@ for key in args.keys:
                 print('man')
             yaxis.append(num)
     plt.plot(np.arange(366), yaxis, label = key)
-n = len(args.keys)
-ind = np.arange(n)
-plt.ylabel('# of Tweets')
-plt.xticks(ind, args.keys)
-plt.xlabel('Day')
+plt.ylabel('Number of Tweets')
+dates = [0, 58, 119, 180, 242, 303]
+months = ['Jan.', "March", "May", "July", "Sept.", "Nov."]
+plt.xticks(dates, months)
+plt.xlabel('Date')
 # fig, ax = plt.subplots(nrows=1, ncols=1)
 # ax.plot(keys[0:11], values[0:11])
 plt.legend()
